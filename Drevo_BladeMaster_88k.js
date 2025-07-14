@@ -45,7 +45,8 @@ let vLedPositions = [
   [1, 4], [2, 4], [3, 4], [4, 4], [5, 4], [6, 4], [7, 4], [8, 4], [9, 4], [10, 4], [11, 4], [12, 4], [13, 4],
   [1, 5], [2, 5], [3, 5], [4, 5], [5, 5], [6, 5], [7, 5], [8, 5], [9, 5], [10, 5], [11, 5], [12, 5], [13, 5], [16, 5],
   [1, 6], [2, 6], [3, 6], [7, 6], [11, 6], [12, 6], [13, 6], [14, 6], [15, 6], [16, 6], [17, 6],
-
+  
+  // These are the LEDs on the edge. The keyboard firmware is a shit, so if you enable them, the keyboard input lags as fuck.
   // [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [10, 0], [11, 0], [12, 0], [13, 0], [15, 0], [16, 0], [17, 0],
   // [18, 1],
   // [18, 2],
@@ -127,10 +128,6 @@ function sendColors(overrideColor) {
 
     device.write(packet, 8);
   }
-
-  // device.write(specialPackets[0], 8)
-  // device.write(specialPackets[0], 8)
-  // device.write(specialPackets[1], 8)
 }
 
 function hexToRgb(hex) {
